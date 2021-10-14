@@ -7,15 +7,16 @@ import random
 
 def deal_cards(number_to_be_dealt):
   hand = []
+  hand_code = []
   x = 0
-  while x < number_to_be_dealt:
-    y = random.randint(1,52)
-    card_code = RandInt_to_Card_Code[y]
+  while x < number_to_be_dealt: 
+    card_code = RandInt_to_Card_Code[random.randint(1,52)]
     standard_rep = Card_Code_to_Standard_Card_Representation[card_code]
     if standard_rep not in hand:
       hand.append(standard_rep)
-      x += 1
+      hand_code.append(card_code)
+      x += 1     
   print(hand)
-  return hand  
+  return hand_code
   
   
