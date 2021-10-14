@@ -21,7 +21,7 @@ def deal_cards(number_to_be_dealt):
   
   
   
-def has_pair(hand):
+def has_pair(hand_code):
   no_suits = []
   for x in hand:
       no_suits.append(x[0])
