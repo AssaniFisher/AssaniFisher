@@ -20,3 +20,14 @@ def deal_cards(number_to_be_dealt):
   return hand_code
   
   
+  
+def has_pair(hand):
+  no_suits = []
+  for x in hand:
+      no_suits.append(x[0])
+  no_suits.sort()
+  for i in range(len(no_suits)):
+    if no_suits[i] == no_suits[i+1]:
+      return True
+  else:
+    return False 
